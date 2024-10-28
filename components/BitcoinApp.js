@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import BitcoinExplorer from './BitcoinExplorer'; // Your existing component
+//import BitcoinExplorer from './BitcoinExplorer'; // Your existing component
 
 // Initialize the Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_API_KEY);

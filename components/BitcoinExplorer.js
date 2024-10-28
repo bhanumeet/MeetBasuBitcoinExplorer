@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_API_KEY);
 const BitcoinExplorer = () => {
   const [blockInfo, setBlockInfo] = useState(null);
   const [priceData, setPriceData] = useState([]);
-  const [selectedAttribute, setSelectedAttribute] = useState(null);
+  //const [selectedAttribute, setSelectedAttribute] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -123,7 +123,7 @@ const BitcoinExplorer = () => {
                 <div 
                   key={key} 
                   className="flex justify-between items-center p-3 bg-white hover:bg-purple-100 rounded-lg transition-colors duration-200 shadow-sm cursor-pointer"
-                  onClick={() => setSelectedAttribute(key)}
+                 // onClick={() => setSelectedAttribute(key)}
                 >
                   <span className="font-semibold capitalize text-purple-700">{key}:</span>
                   <Tooltip>

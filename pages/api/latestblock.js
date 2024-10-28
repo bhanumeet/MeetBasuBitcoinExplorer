@@ -1,5 +1,5 @@
 // pages/api/latestblock.js
-import { NextResponse } from 'next/server';
+//import { NextResponse } from 'next/server';
 
 export default async function handler(req, res) {
   try {
