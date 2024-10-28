@@ -96,7 +96,7 @@ const BitcoinApp = () => {
   return (
     <div className="container mx-auto p-4">
       {/* <BitcoinExplorer /> */}
-      <ChatBot />
+     {/* <ChatBot /> */}
     </div>
   );
 };
