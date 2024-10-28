@@ -1,40 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bitcoin Explorer
+Project contributors - 
+Meet Anil Bhanushali 
+Basavaraj Patil
 
-## Getting Started
+A real-time Bitcoin market data dashboard with an interactive chat interface built using React. The application provides current Bitcoin prices, market statistics, historical price charts, and a chatbot to answer common queries about Bitcoin's market performance.
 
-First, run the development server:
+## Features
 
+- **Real-time Market Data**
+  - Current Bitcoin price in USD
+  - 24-hour price change percentage
+  - 24-hour trading volume
+  - Last update timestamp
+  - Auto-refresh every 30 seconds
+
+- **Price History Visualization**
+  - 30-day price history chart
+  - Interactive line graph with tooltips
+  - Daily price points
+  - Auto-refresh every 5 minutes
+
+- **Interactive Chat Interface**
+  - Floating chat window
+  - Natural language queries about Bitcoin data
+  - Quick responses to common questions
+  - Loading states and error handling
+
+## Tech Stack
+
+- React
+- Recharts for data visualization
+- Lucide React for icons
+- Shadcn/ui components (Tooltip, Card)
+- CoinGecko API for Bitcoin data
+
+## Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+- A modern web browser
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd bitcoin-explorer
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The dashboard will automatically load with the latest Bitcoin market data. Users can:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- View current market statistics in the left panel
+- Hover over info icons for detailed descriptions
+- Interact with the price history chart
+- Click the chat button in the bottom right to ask questions about Bitcoin data
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Chat Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The chatbot understands queries about:
+- Current price
+- 24-hour price changes
+- Trading volume
+- Latest updates
+- General help
 
-## Learn More
+Example queries:
+- "What's the current Bitcoin price?"
+- "How much has Bitcoin changed in the last 24 hours?"
+- "Show me the trading volume"
 
-To learn more about Next.js, take a look at the following resources:
+## API Integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application uses the CoinGecko API for all market data. Two main endpoints are utilized:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `/simple/price` - For current market data
+- `/coins/bitcoin/market_chart` - For historical price data
 
-## Deploy on Vercel
+## Styling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application uses:
+- Tailwind CSS for utility-first styling
+- Custom gradient backgrounds
+- Responsive design for all screen sizes
+- Dark and light theme considerations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Error Handling
+
+The application includes comprehensive error handling for:
+- API failures
+- Network issues
+- Data loading states
+- Invalid user inputs
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Data provided by CoinGecko API
+- UI components from shadcn/ui
+- Icons from Lucide React
